@@ -25,8 +25,8 @@ def solution(nums: list[int]) -> None:
         for i in range(insert, len(nums)):
             nums[i] = 0
 
-def inplace_selector(inputs: list[list[int]], result: None) -> list[int]:
+def inplace_selector(inputs: list[list[int]]) -> list[int]:
     return inputs[0]
 
-tester.test_inplace([[0,1,0,3,12]], [None,[1,3,12,0,0]], solution, inplace_selector)
-tester.test_inplace([[0]], [None,[0]], solution, inplace_selector)
+tester.test_inplace([[0,1,0,3,12]], [1,3,12,0,0], solution, inplace_selector)
+tester.test_inplace([[0]], [0], solution, inplace_selector)
